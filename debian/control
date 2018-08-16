@@ -1,0 +1,10 @@
+Source: aiy-board-tools
+Maintainer: AIY Projects <support-aiyprojects@google.com>
+Build-Depends: debhelper, gnupg
+
+Package: aiy-board-tools
+Section: misc
+Priority: required
+Architecture: all
+Depends: python3-minimal
+Description: Miscellaneous tools to support the AIY Board

@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import sys
+
+if os.geteuid() != 0:
+  print('Can not reboot as a normal user. Please re-run with sudo.')
+  exit(1)
+
+misc_path = os.path.join(os.sep, 'dev', 'disk', 'by-partlabel', 'misc')
+if not os.path.exists(misc_path):
+  print('Could not find a misc partition! Giving up.')
+  sys.exit(1)
+
+with open(misc_path, 'wb') as misc:
+  misc.write(b'bootonce-bootloader')
+
+subprocess.run('reboot')
