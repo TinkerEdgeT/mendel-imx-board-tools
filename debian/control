@@ -1,6 +1,8 @@
 Source: aiy-board-tools
 Maintainer: AIY Projects <support-aiyprojects@google.com>
 Build-Depends: debhelper, gnupg
+Section: misc
+Priority: optional
 
 Package: aiy-board-tools
 Section: misc
