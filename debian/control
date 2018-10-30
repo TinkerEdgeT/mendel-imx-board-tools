@@ -6,7 +6,7 @@ Priority: optional
 
 Package: aiy-board-tools
 Section: misc
-Priority: required
+Priority: optional
 Architecture: all
 Depends: python3-minimal
 Description: Miscellaneous tools to support the AIY Board
