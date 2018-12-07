@@ -49,7 +49,7 @@ PINS = {
     9:  ('GND',               Kind.GND),   10: ('UART1_RX',           Kind.UART),
     11: ('UART3_RXD',         Kind.UART),  12: ('SAI1_TXC',           Kind.SAI),
     13: ('GPIO_P13 (gpio6)',  Kind.GPIO),  14: ('GND',                Kind.GND),
-    15: ('PWM3 (pwmchip2)',   Kind.PWM),   16: ('GPIO_P16 (gpio88)',  Kind.GPIO),
+    15: ('PWM3 (pwmchip2)',   Kind.PWM),   16: ('GPIO_P16 (gpio73)',  Kind.GPIO),
     17: ('3.3V',              Kind.POWER), 18: ('GPIO_P18 (gpio138)', Kind.GPIO),
     19: ('SPI1_MOSI',         Kind.SPI),   20: ('GND',                Kind.GND),
     21: ('SPI1_MISO',         Kind.SPI),   22: ('GPIO_P22 (gpio140)', Kind.GPIO),
@@ -60,7 +60,7 @@ PINS = {
     31: ('GPIO_P31 (gpio8)',  Kind.GPIO),  32: ('PWM1 (pwmchip0)',    Kind.PWM),
     33: ('PWM2 (pwmchip1)',   Kind.PWM),   34: ('GND',                Kind.GND),
     35: ('SAI1_TXFS',         Kind.SAI),   36: ('GPIO_P36 (gpio141)', Kind.GPIO),
-    37: ('GPIO_P37 (gpio86)', Kind.GPIO),  38: ('SAI1_RXD0',          Kind.SAI),
+    37: ('GPIO_P37 (gpio77)', Kind.GPIO),  38: ('SAI1_RXD0',          Kind.SAI),
     39: ('GND',               Kind.GND),   40: ('SAI1_TXD0',          Kind.SAI)
 }
 
