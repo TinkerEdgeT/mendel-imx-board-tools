@@ -1,10 +1,10 @@
-Source: aiy-board-tools
+Source: imx-board-tools
 Maintainer: AIY Projects <support-aiyprojects@google.com>
 Build-Depends: debhelper
 Section: misc
 Priority: optional
 
-Package: aiy-board-tools
+Package: imx-board-tools
 Section: misc
 Priority: optional
 Architecture: all
