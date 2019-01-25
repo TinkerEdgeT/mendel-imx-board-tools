@@ -8,5 +8,11 @@ Package: imx-board-tools
 Section: misc
 Priority: optional
 Architecture: all
-Depends: python3-minimal
+Depends: gstreamer1.0-plugins-bad,
+         gstreamer1.0-plugins-base,
+         gstreamer1.0-plugins-good,
+         python3-gi,
+         python3-gst-1.0,
+         python3-minimal
+         weston-imx
 Description: Miscellaneous tools to support the AIY Board
