@@ -166,11 +166,11 @@ class SnapHelper:
       thread.start()
 
   def get_filename(self):
-    if self.oneshot:
-      filename = self.prefix + '.' + self.suffix
-    else:
+    while True:
       filename = self.prefix + str(self.num).zfill(4) + '.' + self.suffix
       self.num = self.num + 1
+      if not os.path.exists(filename):
+        break
 
     return filename
 
