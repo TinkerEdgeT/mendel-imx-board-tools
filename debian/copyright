@@ -3,5 +3,5 @@ Upstream-Name: imx-board-tools
 Source: https://aiyprojects.googlesource.com/imx-board-tools
 
 Files: *
-Copyright: Copyright 2018 Google, LLC <support-aiyprojects@google.com>
+Copyright: Copyright 2018 Google, LLC <coral-support@google.com>
 License: Apache-2.0
