@@ -1,5 +1,5 @@
 Source: imx-board-tools
-Maintainer: AIY Projects <coral-support@google.com>
+Maintainer: Coral <coral-support@google.com>
 Build-Depends: debhelper
 Section: misc
 Priority: optional
