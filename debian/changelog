@@ -1,3 +1,9 @@
+imx-board-tools (4-1) mendel-chef; urgency=medium
+
+  * Cut for chef release
+
+ -- Coral <coral-support@google.com>  Tue, 19 Mar 2019 17:08:25 -0700
+
 imx-board-tools (3-1) mendel-beaker; urgency=medium
 
   * Prevent overwriting of files when saving image
