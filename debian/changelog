@@ -1,3 +1,9 @@
+imx-board-tools (5-1) mendel-chef; urgency=medium
+
+  * Add check that camera is present and initialized
+
+ -- Coral <coral-support@google.com>  Wed, 03 Apr 2019 17:08:25 -0700
+
 imx-board-tools (4-1) mendel-chef; urgency=medium
 
   * Cut for chef release
