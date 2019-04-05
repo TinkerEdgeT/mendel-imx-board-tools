@@ -21,7 +21,7 @@ imx-board-tools (2-1) mendel-beaker; urgency=medium
 
   * Fix misnamed install file after package rename.
 
- -- Coral <coral-support@google.com> Tue, 22 Jan 2019 13:15:09 -0800
+ -- Coral <coral-support@google.com>  Tue, 22 Jan 2019 13:15:09 -0800
 
 imx-board-tools (1-1) mendel-beaker; urgency=medium
 
