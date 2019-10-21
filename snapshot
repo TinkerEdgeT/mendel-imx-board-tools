@@ -7,6 +7,7 @@ import os
 import select
 import sys
 import termios
+import time
 import threading
 
 import gi
@@ -17,7 +18,6 @@ from functools import partial
 from gi.repository import GLib, GObject, Gst, GstBase
 from PIL import Image
 
-GObject.threads_init()
 Gst.init(None)
 
 FILENAME_PREFIX = 'img'
@@ -114,7 +114,7 @@ def run_pipeline(snapinfo):
   appsink = pipeline.get_by_name('appsink')
   appsink.connect('new-sample', partial(on_new_sample, snapinfo=snapinfo))
 
-  loop = GObject.MainLoop()
+  loop = GLib.MainLoop()
 
   # Set up a pipeline bus watch to catch errors.
   bus = pipeline.get_bus()
@@ -164,12 +164,12 @@ class SnapHelper:
     self.num = 0
     self.scrapframes = SCRAP_FRAMES
     self.sysfs = sysfs
+    self.loop = None
 
     if not oneshot:
       self.pipe_r, self.pipe_w = os.pipe()
-      thread = threading.Thread(target=self.read_keyboard)
-      thread.daemon = True
-      thread.start()
+      self.thread = threading.Thread(target=self.read_keyboard)
+      self.thread.daemon = True
 
   def get_filename(self):
     while True:
@@ -193,6 +193,8 @@ class SnapHelper:
         if c == 'r':
           self.refocus()
         if c == 'q':
+          while not self.loop.is_running():
+            time.sleep(0.01)
           self.loop.quit()
           break
 
@@ -242,6 +244,7 @@ class SnapHelper:
 
   def connect_loop(self, loop):
     self.loop = loop
+    self.thread.start()
 
 
 def main(arguments):
