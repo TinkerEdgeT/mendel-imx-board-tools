@@ -165,6 +165,7 @@ class SnapHelper:
     self.scrapframes = SCRAP_FRAMES
     self.sysfs = sysfs
     self.loop = None
+    self.thread = None
 
     if not oneshot:
       self.pipe_r, self.pipe_w = os.pipe()
@@ -244,7 +245,8 @@ class SnapHelper:
 
   def connect_loop(self, loop):
     self.loop = loop
-    self.thread.start()
+    if self.thread:
+      self.thread.start()
 
 
 def main(arguments):
