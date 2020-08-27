@@ -1,3 +1,9 @@
+imx-board-tools (6-3) mendel-day; urgency=medium
+
+  * Fix broken use of --oneshot in snapshot app
+
+ -- Coral <coral-support@google.com>  Thu 27 Aug 2020 12:33:45 -0700
+
 imx-board-tools (6-2) mendel-day; urgency=medium
 
   * Fix warnings and crash in snapshot app.
